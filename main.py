@@ -33,7 +33,7 @@ def getvideolist():
 
 def checkquery():
     if len(sys.argv) <= 2:
-        usage()
+        print('Missing query. Use ' + sys.argv[0] + ' --help for information')
         sys.exit()
 
 def downloadvideo(filename):
@@ -51,6 +51,7 @@ option = sys.argv[1].lower()
 
 # Download feature
 if option == "--download" or  option == "-d":
+    checkquery()
     print('\nDownloading all files matching ' + bcolors.YELLOW + sys.argv[2] + bcolors.ENDC + "\n")
     query = sys.argv[2].lower()
     videolist = getvideolist()
@@ -59,6 +60,7 @@ if option == "--download" or  option == "-d":
             downloadvideo(video['file'])
 # Search feature
 elif option == "--search" or option == "-s":
+    checkquery()
     print ('Searching for files matching "' + sys.argv[2] + '" from openings.moe')
     query = sys.argv[2].lower()
     videolist = getvideolist()
