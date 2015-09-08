@@ -20,7 +20,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def usage(): # Sorry in advance for this one
-    print('\nUsage: main.py [option] [query]\n\n' + bcolors.YELLOW + 'Sample usage:\nmain.py --search geass\nmain.py --download geass' + bcolors.ENDC + '\n\n--search | -s\n    Searches for all videos matching the query provided.\n\n--download | -d\n    Downloads all videos matching the query provided into the current working folder.\n\nTo use multiple words in a search, surround them in quotes. eg:\nmain.py -d "Code Geass"\n')
+    print('\nUsage: ' + sys.argv[0]  + ' [option] [query]\n\n' + bcolors.YELLOW + 'Sample usage:\n' + sys.argv[0] + ' --search geass\n' + sys.argv[0] + ' --download geass' + bcolors.ENDC + '\n\n--search | -s\n    Searches for all videos matching the query provided.\n\n--download | -d\n    Downloads all videos matching the query provided into the current working folder.\n\nTo use multiple words in a search, surround them in quotes. eg:\n' + sys.argv[0] + ' -d "Code Geass"\n')
     sys.exit()
 
 # Obtain all videos from the json API
