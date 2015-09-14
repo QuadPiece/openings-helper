@@ -1,8 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-# First off, let me say: Sorry for all the ghetto code, this was my first time working with arguments in python
-# I didn't follow any guide and barely touched any documentation while making this.
-# As such, I have absolutely no idea what's a good way to handle arguments and I am perfectly aware that this is horrible
 import os
 import urllib.request
 import json
