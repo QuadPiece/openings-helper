@@ -4,7 +4,7 @@
     openings-helper
     ~~~~~~~~~~~~~~~
 
-    A small script for downloading videos from http://openings.moe
+    A small download script for http://openings.moe
 """
 import os
 import urllib.request
@@ -43,7 +43,7 @@ def controller():
 
 
 def getvideolist():
-    """Obtain all videos from the json API."""
+    """Fetch list of all videos from the json API."""
     url = 'http://openings.moe/api/list.php'
     response = urllib.request.urlopen(url)
     lstjson = response.read().decode('utf-8', 'ignore')
@@ -52,7 +52,7 @@ def getvideolist():
 
 
 def downloadvideo(filename):
-    """Download a video with given filename."""
+    """Download a video based on given filename."""
     url = "http://openings.moe/video/" + filename
     f = urllib.request.urlopen(url)
     print(bcolors.PURPLE + url + bcolors.ENDC + ":\nSaving to --> "
