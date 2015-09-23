@@ -1,18 +1,14 @@
 # openings-helper
-Openings.moe batch downloader
+A simple command-line openings.moe batch downloader.
+
+## Requires
+* Python 2.7+ or 3+.
+
+Created and tested with Python 2.7 and 3.
 
 ## Features
-
-* Video search and listing
-* (Batch) download
+* Video search and listing.
+* (Batch) download.
 
 ## Usage
-
-**Created for Python 3**
-
-`python main.py` or `python3 main.py` depending on distribution. Details will be displayed. 
-
-## Known issues
-
-* Videos with special unicode signs will crash it.
-* Argument handling is pretty horrible, but sorry. I'm new to this.
+`python main.py` or `python3 main.py` depending on your Python version. Details will be displayed.
